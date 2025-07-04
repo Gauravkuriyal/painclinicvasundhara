@@ -1,13 +1,15 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
+import AppointmentFormModal from "../utility/appointmentFormModal";
 
 export default function HeroSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   // Carousel slides data
   const slides = [
     {
@@ -79,11 +81,12 @@ export default function HeroSection() {
               Schedule a consultation with our pain care experts today and take the first step toward relief.
             </p>
             <Button
-              asChild
+              onClick={() => setIsModalOpen(true)}
               className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white"
             >
-              <Link href="/contact">Book Appointment</Link>
+              Book Appointment
             </Button>
+            <AppointmentFormModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
           </CardContent>
         </Card>
       </div>
