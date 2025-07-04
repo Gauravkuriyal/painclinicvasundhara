@@ -26,7 +26,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
-import AppointmentFormModal from "./AppointmentFormModal";
+import AppointmentFormModal from "./appointmentFormModal";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
