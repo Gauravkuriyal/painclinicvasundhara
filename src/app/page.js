@@ -1,5 +1,5 @@
 import AboutUsSection from "@/components/home/aboutUsSection";
-import ContactSection from "@/components/home/contactSection";
+import ContactSection from "@/components/contact/contactSection";
 import HeroSection from "@/components/home/heroSection";
 import ServicesSection from "@/components/home/servicesSection";
 import TestimonialsSection from "@/components/home/testimonialsSection";
@@ -13,10 +13,10 @@ export default function Home() {
     <>
     <Header />
     <HeroSection />
-    <WhyChooseUsSection />
-    <ServicesSection />
     <AboutUsSection />
-    <ContactSection />
+    <ServicesSection />
+    <WhyChooseUsSection />
+    {/* <ContactSection /> */}
     <TestimonialsSection />
     <Footer />
     </>

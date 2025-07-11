@@ -66,19 +66,26 @@ export default function Header() {
         }
       `}</style>
       <header className="fixed top-0 left-0 flex justify-between items-center w-full px-[5%] my-[1%]">
-        <div id="headerContainer" className="relative flex justify-between items-center w-full px-[1%]">
-          <div className="header_logo_container w-fit">
+        <div id="headerContainer" className="relative flex justify-between items-center w-full px-[1%] bg-[#00000077] backdrop-blur-sm rounded-full">
+          <div className="header_logo_container w-fit bg-[#ffffff] rounded-full p-2">
             <Link href={"/"} title="Home Page" className="block relative h-[40px] w-[200px] flex-shrink-0">
               <Image src={"/images/logo.png"} alt="logo" title="logo" fill className="object-contain" />
             </Link>
           </div>
 
-          <nav className={"w-fit flex items-center gap-5 bg-none rounded-full px-4 py-2 " + (isScrolled ? "text-black" : "text-white")}>
+          <nav className={"w-fit flex items-center gap-5 bg-none rounded-full px-4 py-4 font-semibold tracking-wide"+" " + (isScrolled ? "text-black" : "text-white")}>
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
+                  <NavigationMenuLink asChild className={"hover:text-blue-400"}>
+                    <Link href={"/about"} title="About Page">
+                      About Us
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
                   <NavigationMenuTrigger className={"hover:text-blue-400 bg-transparent font-normal"}>
-                    <Link href={"#"} title="Services" className="font-normal hover:text-blue-400">
+                    <Link href={"#"} title="Services" className="font-semibold hover:text-blue-400">
                       Services
                     </Link>
                   </NavigationMenuTrigger>
@@ -134,7 +141,7 @@ export default function Header() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
-                <NavigationMenuItem>
+                {/* <NavigationMenuItem>
                   <NavigationMenuTrigger className={"font-normal bg-transparent hover:text-blue-400"}>
                     Pain
                   </NavigationMenuTrigger>
@@ -150,11 +157,11 @@ export default function Header() {
                       </ListItem>
                     </ul>
                   </NavigationMenuContent>
-                </NavigationMenuItem>
+                </NavigationMenuItem> */}
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className={"font-normal bg-transparent hover:text-blue-400"}>
-                    <Link href={"#"} title="Blogs">
+                  <NavigationMenuTrigger className={"font-semibold bg-transparent hover:text-blue-400"}>
+                    <Link href={"/blogs"} title="Blogs">
                       Blogs
                     </Link>
                   </NavigationMenuTrigger>
@@ -175,7 +182,7 @@ export default function Header() {
                       </ListItem>
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
-                          <Link href={"#"}>
+                          <Link href={"/blogs"}>
                             <div className="font-medium text-blue-400">See all blogs</div>
                           </Link>
                         </NavigationMenuLink>
@@ -185,21 +192,15 @@ export default function Header() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild className={"hover:text-blue-400"}>
-                    <Link href={"#"} title="Gallery Page">
+                    <Link href={"/gallery"} title="Gallery Page">
                       Gallery
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
+
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild className={"hover:text-blue-400"}>
-                    <Link href={"#"} title="About Page">
-                      About Us
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild className={"hover:text-blue-400"}>
-                    <Link href={"#"} title="Contact Page">
+                    <Link href={"/contact"} title="Contact Page">
                       Contact
                     </Link>
                   </NavigationMenuLink>

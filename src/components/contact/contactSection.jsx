@@ -16,7 +16,7 @@ export default function ContactSection() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStatus, setFormStatus] = useState(null); // { type: "success" | "error", message: string }
-  const [showMap, setShowMap] = useState(false);
+  // const [showMap, setShowMap] = useState(false);
   const [isMounted, setIsMounted] = useState(false); // To trigger entrance animations
 
   const handleChange = (e) => {
@@ -119,13 +119,13 @@ export default function ContactSection() {
               </li>
             </ul>
             {/* Map Toggle Button */}
-            <Button
+            {/* <Button
               onClick={() => setShowMap(!showMap)}
               className="mt-10 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 rounded-lg shadow-md transition-all duration-300 flex items-center justify-center gap-2"
             >
               {showMap ? "Hide Clinic Locations" : "Show Clinic Locations on Map"}
               {showMap ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
-            </Button>
+            </Button> */}
           </div>
 
           {/* Contact Form */}
@@ -214,7 +214,7 @@ export default function ContactSection() {
         </div>
 
         {/* Map Section */}
-        {showMap && (
+        {/* {showMap && ( */}
           <div
             className={`
               mt-16 grid grid-cols-1 md:grid-cols-2 gap-8
@@ -246,7 +246,7 @@ export default function ContactSection() {
               />
             </div>
           </div>
-        )}
+        {/* )} */}
       </div>
 
       {/* Custom CSS for Animations */}

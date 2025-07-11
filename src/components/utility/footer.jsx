@@ -62,6 +62,63 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Newsletter & Key Treatments */}
+          <div className="space-y-6">
+            {/* Newsletter Card */}
+            {/* <div className={`
+                newsletter-card
+                bg-gray-700/50 backdrop-blur-lg border border-gray-600
+                p-8 rounded-2xl shadow-xl
+                transition-all duration-1000 ease-out
+                ${showNewsletter ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}
+              `}> 
+              <h3 className="text-2xl font-bold mb-4 text-white">Stay Connected</h3> 
+              <p className="text-sm text-gray-400 mb-6 leading-relaxed">
+                Get the latest insights on pain management and clinic updates directly to your inbox.
+              </p>
+              <div className="flex flex-col gap-4">
+                <Input
+                  type="email"
+                  placeholder="Your Email Address"
+                  className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors py-2.5"
+                />
+                <Button className="w-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-semibold py-3.5 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">
+                  Subscribe
+                </Button>
+              </div>
+            </div> */}
+
+            {/* Key Treatments Section - Improved Layout */}
+            <h3 className="text-2xl font-bold mb-2 text-white">Our Key Treatments</h3> {/* More spacing, clearer title */}
+            <div className="grid grid-cols-2 gap-x-6 gap-y-4 text-base"> {/* 2-column grid for treatments */}
+              {[
+                { title: "PRP Therapy", href: "/treatments/prp-therapy" },
+                { title: "Back & Spine Care", href: "/treatments/back-pain" },
+                { title: "Joint Pain Solutions", href: "/treatments/joint-pain" },
+                { title: "Non-Surgical Alternatives", href: "/treatments/non-surgical" },
+                { title: "Sports Injury Rehab", href: "/treatments/sports-injury" },
+                { title: "Neuropathic Pain Mgmt.", href: "/treatments/nerve-pain" },
+                { title: "Muscular Pain Therapy", href: "/treatments/muscular-pain" },
+                { title: "Knee Pain Solutions", href: "/treatments/knee-pain" },
+              ].map((treatment) => (
+                <Link
+                  key={treatment.title}
+                  href={treatment.href}
+                  className="flex items-center group text-gray-300 hover:text-blue-300 transition-colors duration-200"
+                >
+                  <ChevronRight className="h-4 w-4 mr-2 text-blue-400 group-hover:translate-x-1 transition-transform" />
+                  {treatment.title}
+                </Link>
+              ))}
+            </div>
+            <Link
+              href="/treatments"
+              className="text-blue-400 hover:underline hover:text-blue-300 transition-colors duration-200 mt-5 inline-block font-semibold"
+            >
+              View All Treatments
+            </Link>
+          </div>
+
           {/* Quick Links */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold mb-4 text-white">Quick Links</h3>
@@ -127,62 +184,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter & Key Treatments */}
-          <div className="space-y-6">
-            {/* Newsletter Card */}
-            <div className={`
-                newsletter-card
-                bg-gray-700/50 backdrop-blur-lg border border-gray-600
-                p-8 rounded-2xl shadow-xl
-                transition-all duration-1000 ease-out
-                ${showNewsletter ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}
-              `}> {/* Darker, more prominent newsletter card */}
-              <h3 className="text-2xl font-bold mb-4 text-white">Stay Connected</h3> {/* More engaging title */}
-              <p className="text-sm text-gray-400 mb-6 leading-relaxed">
-                Get the latest insights on pain management and clinic updates directly to your inbox.
-              </p>
-              <div className="flex flex-col gap-4">
-                <Input
-                  type="email"
-                  placeholder="Your Email Address"
-                  className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors py-2.5"
-                />
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-semibold py-3.5 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105"> {/* More gradient, slightly taller button, hover effect */}
-                  Subscribe
-                </Button>
-              </div>
-            </div>
-
-            {/* Key Treatments Section - Improved Layout */}
-            <h3 className="text-2xl font-bold mt-10 mb-5 text-white">Our Key Treatments</h3> {/* More spacing, clearer title */}
-            <div className="grid grid-cols-2 gap-x-6 gap-y-4 text-base"> {/* 2-column grid for treatments */}
-              {[
-                { title: "PRP Therapy", href: "/treatments/prp-therapy" },
-                { title: "Back & Spine Care", href: "/treatments/back-pain" },
-                { title: "Joint Pain Solutions", href: "/treatments/joint-pain" },
-                { title: "Non-Surgical Alternatives", href: "/treatments/non-surgical" },
-                { title: "Sports Injury Rehab", href: "/treatments/sports-injury" },
-                { title: "Neuropathic Pain Mgmt.", href: "/treatments/nerve-pain" },
-                { title: "Muscular Pain Therapy", href: "/treatments/muscular-pain" },
-                { title: "Knee Pain Solutions", href: "/treatments/knee-pain" },
-              ].map((treatment) => (
-                <Link
-                  key={treatment.title}
-                  href={treatment.href}
-                  className="flex items-center group text-gray-300 hover:text-blue-300 transition-colors duration-200"
-                >
-                  <ChevronRight className="h-4 w-4 mr-2 text-blue-400 group-hover:translate-x-1 transition-transform" />
-                  {treatment.title}
-                </Link>
-              ))}
-            </div>
-            <Link
-              href="/treatments"
-              className="text-blue-400 hover:underline hover:text-blue-300 transition-colors duration-200 mt-5 inline-block font-semibold"
-            >
-              View All Treatments
-            </Link>
-          </div>
+          
         </div>
 
         {/* Bottom Bar */}
