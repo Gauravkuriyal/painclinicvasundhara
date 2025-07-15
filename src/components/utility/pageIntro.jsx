@@ -13,7 +13,7 @@ export default function PageIntro({ crumbs, title,className }) {
     return (<>
         <div className={"px-[5%] py-[2%] flex items-center justify-center bg-[#00000072]/50 rounded-full"+" "+className}>
             <Breadcrumb >
-            <BreadcrumbList>
+            <BreadcrumbList className={"flex items-center justify-center"}>
                 {crumbs.map((crumb, index) => (
                     <React.Fragment key={index}>
                         <BreadcrumbItem>

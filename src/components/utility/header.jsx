@@ -85,9 +85,9 @@ export default function Header() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className={"hover:text-blue-400 bg-transparent font-normal"}>
-                    <Link href={"#"} title="Services" className="font-semibold hover:text-blue-400">
+                    {/* <Link href={"#"} title="Services" className="font-semibold hover:text-blue-400"> */}
                       Services
-                    </Link>
+                    {/* </Link> */}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[600px] gap-3 p-4 md:w-[750px] md:grid-cols-3 lg:w-[900px]">
@@ -119,7 +119,7 @@ export default function Header() {
                         <ListItem href={"#"} title="Rheumatoid Arthritis">
                           Back pain is a common complaint. Four out of five people will experience lower back pain
                         </ListItem>
-                        <ListItem href={"#"} title="See all >>" className={"text-blue-400"}></ListItem>
+                        <ListItem href={"/conditions-we-treat"} title="See all >>" className={"text-blue-400"}></ListItem>
                       </div>
                       <div>
                         <h3 className="mb-3 font-semibold text-lg text-gray-800">Treatments Offered</h3>
@@ -135,7 +135,7 @@ export default function Header() {
                         <ListItem href={"#"} title="Laser Therapy">
                           Back pain is a common complaint. Four out of five people will experience lower back pain
                         </ListItem>
-                        <ListItem href={"#"} title="See all >>" className={"text-blue-400"}></ListItem>
+                        <ListItem href={"/treatments-we-offer"} title="See all >>" className={"text-blue-400"}></ListItem>
                       </div>
                     </ul>
                   </NavigationMenuContent>

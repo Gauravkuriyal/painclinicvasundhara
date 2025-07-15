@@ -112,7 +112,7 @@ export default function Footer() {
               ))}
             </div>
             <Link
-              href="/treatments"
+              href="/treatments-we-offer"
               className="text-blue-400 hover:underline hover:text-blue-300 transition-colors duration-200 mt-5 inline-block font-semibold"
             >
               View All Treatments
