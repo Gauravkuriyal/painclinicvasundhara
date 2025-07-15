@@ -9,6 +9,6 @@ export default function ContactPage(){
     <Header />
     <GalleryHeroSection />
     <GallerySection />
-    <Footer />
+    <Footer /> 
     </>
 }
