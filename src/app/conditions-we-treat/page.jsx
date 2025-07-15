@@ -1,4 +1,4 @@
-import ServicesHeroSection from "@/components/services/ServicesHeroSection";
+import ServicesHeroSection from "@/components/services/servicesHeroSection";
 import ServicesListSection from "@/components/services/servicesListSectionConditionWeTreat";
 import Footer from "@/components/utility/footer";
 import Header from "@/components/utility/header";
