@@ -77,14 +77,14 @@ export default function Header() {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuLink asChild className={"hover:text-blue-400"}>
+                  <NavigationMenuLink asChild className={"hover:text-blue-400 text-[18px]"}>
                     <Link href={"/about"} title="About Page">
                       About Us
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className={"hover:text-blue-400 bg-transparent font-normal"}>
+                  <NavigationMenuTrigger className={"hover:text-blue-400 bg-transparent font-semibold text-[18px]"}>
                     {/* <Link href={"#"} title="Services" className="font-semibold hover:text-blue-400"> */}
                       Services
                     {/* </Link> */}
@@ -160,7 +160,7 @@ export default function Header() {
                 </NavigationMenuItem> */}
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className={"font-semibold bg-transparent hover:text-blue-400"}>
+                  <NavigationMenuTrigger className={"font-semibold bg-transparent hover:text-blue-400 text-[18px]"}>
                     <Link href={"/blogs"} title="Blogs">
                       Blogs
                     </Link>
@@ -191,7 +191,7 @@ export default function Header() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuLink asChild className={"hover:text-blue-400"}>
+                  <NavigationMenuLink asChild className={"hover:text-blue-400 text-[18px]"}>
                     <Link href={"/gallery"} title="Gallery Page">
                       Gallery
                     </Link>
@@ -199,7 +199,7 @@ export default function Header() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink asChild className={"hover:text-blue-400"}>
+                  <NavigationMenuLink asChild className={"hover:text-blue-400 text-[18px]"}>
                     <Link href={"/contact"} title="Contact Page">
                       Contact
                     </Link>
@@ -212,7 +212,7 @@ export default function Header() {
           <div className="w-fit">
             <Button
               onClick={() => setIsModalOpen(true)}
-              className="cursor-pointer flex items-center gap-3 bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-full transition-all duration-300 hover:scale-105"
+              className="cursor-pointer flex items-center gap-3 bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 text-[16px]"
             >
               <Calendar className="h-5 w-5" />
               Book Appointment
